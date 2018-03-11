@@ -110,9 +110,9 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
-				<key>AddDTGP_0001</key>
+				<key>AddDTGP</key>
 				<true/>
-				<key>FixDarwin7_10000</key>
+				<key>FixDarwin7</key>
 				<true/>
 			</dict>
 			<key>Name</key>
@@ -257,7 +257,7 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 -disablegfxfirmware</string>
+		<string>kext-dev-mode=1</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -270,8 +270,12 @@
 		<string>PBR</string>
 		<key>NeverDoRecovery</key>
 		<true/>
+		<key>NeverHibernate</key>
+		<true/>
+		<key>SkipHibernateTimeout</key>
+		<true/>
 		<key>Timeout</key>
-		<integer>4</integer>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -532,9 +536,9 @@
 			<false/>
 		</dict>
 		<key>ScreenResolution</key>
-		<string>1920x1080</string>
+		<string>2560x2048</string>
 		<key>Theme</key>
-		<string>metal</string>
+		<string>Xiaomi</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -710,11 +714,11 @@
 		<false/>
 		<key>KernelCpu</key>
 		<false/>
-		<key>KernelIvyXCPM</key>
-		<false/>
 		<key>KernelLapic</key>
 		<false/>
 		<key>KernelPm</key>
+		<false/>
+		<key>KernelXCPM</key>
 		<false/>
 		<key>KextsToPatch</key>
 		<array>
@@ -727,6 +731,8 @@
 				<data>
 				g710////EA==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
@@ -745,6 +751,8 @@
 				<data>
 				AABgAgAAUAE=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Replace</key>
@@ -761,6 +769,8 @@
 				<data>
 				RXh0ZXJuYWw=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleAHCIPort</string>
 				<key>Replace</key>
@@ -777,6 +787,8 @@
 				<data>
 				AEFQUExFIFNTRAA=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
@@ -793,6 +805,8 @@
 				<data>
 				ihnUEQ==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
@@ -809,6 +823,8 @@
 				<data>
 				ixnUEQ==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
@@ -825,11 +841,29 @@
 				<data>
 				eG1sLnps
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
 				<data>
 				em1sLnps
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change 15 port limit to 26 in 10.13 XHCI kext</string>
+				<key>Find</key>
+				<data>
+				g32MEA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
+				<key>Replace</key>
+				<data>
+				g32MGw==
 				</data>
 			</dict>
 		</array>
@@ -1008,7 +1042,7 @@
 		<key>#NvidiaWeb</key>
 		<false/>
 		<key>InjectKexts</key>
-		<string>Yes</string>
+		<string>YES</string>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
