@@ -2,14 +2,15 @@
 
 ASUS-Z170i PRO Gaming only
 
-|Tested On |                                                                                        |
+|Tested On |    |
 |--------------: | :---------------------------------|
-|MB     | ASUS Z170i PRO Gaming                                   |
-|CPU     | Intel i5-6600K                                   |
+|MB     | ASUS Z170i PRO Gaming          |
+|CPU     | Intel i5-6600K                              |
 |GPU     | Sapphire AMD RX480 Nitro+ OC (Polaris)        |
 
-|Behavior|                                                                                        |
+|Behavior|                           |
 |--------------: | :---------------------------------|
 |Not Working | Bluetooth, GPU Accelleration on loading screen|
-|Working | Everything else  (RX480 Accelleration need edits                  |
+|Working | Everything else  (RX480 Accelleration need edits)    |
 
+Original work by @landingpencil
